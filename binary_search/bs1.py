@@ -3,7 +3,7 @@ import numpy as np
 
 def binary_search(x, start, end, key):
     while(start <= end):
-        mid = (start + end)/2
+        mid = start + (end - start)/2 ##To avoid overflow
         if(x[mid] == key):
             print ("Key found at position:", mid + 1)
             return
